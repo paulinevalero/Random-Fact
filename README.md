@@ -1,6 +1,9 @@
-# Random Fact
+# Random Useless Facts
 
-> A NXTIot project
+> A project for NXTIot by Paulina
+
+Get a new useless fact everytime you click the button, you can get it in english or german!!!
+
 
 ## Frontend
 
@@ -18,4 +21,4 @@ npm run build
 ## Backend
 
 ```bash
-# serve with hot reload at localhost:3000
+# serve at localhost:3000
