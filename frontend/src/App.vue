@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="background is-mobile"></div>
+
     <header>
       <h1 class="title is-2 has-text-centered button-fact">Random Useless Facts</h1>
     </header>
@@ -8,6 +9,11 @@
       <div class="columns is-centered is-mobile">
         <div class="column is-narrow button-fact">
           <button class="button is-success" v-on:click="getUselessFact">Get a new useless fact</button>
+        </div>
+      </div>
+      <div class="columns is-centered is-mobile">
+        <div class="gif" v-if="loading">
+          <img src="../src/assets/loading_icon.gif" />
         </div>
       </div>
 
@@ -27,17 +33,23 @@ export default {
   name: "app",
   data() {
     return {
-      uselessFact: {}
+      uselessFact: {},
+      loading: false
     };
   },
   methods: {
     getUselessFact: function() {
+      this.loading = true;
       axios
         .get("http://localhost:3000")
         .then(response => {
+          this.loading = false;
           this.uselessFact = response.data.newFact;
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+          this.loading = false;
+          console.log(error);
+        });
     }
   }
 };
@@ -57,5 +69,9 @@ export default {
   background-position: bottom;
   width: 100vw;
   height: 200px;
+}
+.gif {
+  width: 20%;
+  height: 20%;
 }
 </style>
