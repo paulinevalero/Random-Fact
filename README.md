@@ -1,8 +1,11 @@
-# Random Fact
+# Random Useless Facts
 
-> A NXTIot project
+> A project for NXTIot by Paulina
 
-## Build Setup
+Get a new useless fact everytime you click the button, you can get it in english or german!!!
+
+
+## Frontend
 
 ```bash
 # install dependencies
@@ -14,3 +17,9 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
+## Backend
+
+```bash
+# serve at localhost:3000
+npm run dev
