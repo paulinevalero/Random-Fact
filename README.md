@@ -2,7 +2,7 @@
 
 > A NXTIot project
 
-## Build Setup
+## Frontend
 
 ```bash
 # install dependencies
@@ -14,3 +14,8 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
+## Backend
+
+```bash
+# serve with hot reload at localhost:3000
